@@ -105,7 +105,7 @@ def list_repos(affiliations):
     q = """
     query($cursor: String, $affiliations: [RepositoryAffiliation]) {
       viewer {
-        repositories(first: 100, after: $cursor, ownerAffiliations: $affiliations, isFork: false) {
+        repositories(first: 100, after: $cursor, ownerAffiliations: $affiliations) {
           pageInfo { hasNextPage endCursor }
           nodes { nameWithOwner isPrivate defaultBranchRef { name } }
         }
