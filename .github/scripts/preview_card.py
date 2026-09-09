@@ -72,11 +72,13 @@ THEMES = {
         "bg": "#0d1117", "border": "#30363d", "header": "#eb6f92",
         "header_at": "#ffffff", "dash": "#8b949e", "section": "#ffffff",
         "label": "#eb6f92", "value": "#c9d1d9", "art": "#eb6f92",
+        "added": "#3fb950", "deleted": "#f85149",
     },
     "light": {
         "bg": "#ffffff", "border": "#d0d7de", "header": "#eb6f92",
         "header_at": "#24292f", "dash": "#57606a", "section": "#24292f",
         "label": "#eb6f92", "value": "#24292f", "art": "#eb6f92",
+        "added": "#1a7f37", "deleted": "#cf222e",
     },
 }
 
@@ -131,10 +133,14 @@ def build_blocks(values):
             [("Personal Repos:", str(values["PERSONAL_REPOS"])), ("Other Repos:", str(values["OTHER_REPOS"]))],
             [("Personal Commits:", values["PERSONAL_COMMITS"]), ("Other Commits:", values["OTHER_COMMITS"])],
         ]},
-        {"type": "fields", "items": [
-            ("Lines of Code:", f"{values['TOTAL_LOC']} ({values['LOC_ADDED']}++, {values['LOC_DELETED']}--)"),
-        ]},
+        {"type": "loc", "label": "Lines of Code:", "total": values["TOTAL_LOC"],
+         "added": values["LOC_ADDED"], "deleted": values["LOC_DELETED"]},
     ]
+
+
+def loc_value_text(b):
+    """Plain-text rendering of a 'loc' block's value, used for width math."""
+    return f"{b['total']} ({b['added']}++, {b['deleted']}--)"
 
 
 def label_column_width(blocks):
@@ -142,6 +148,7 @@ def label_column_width(blocks):
     every label/value pair lines up at the same x position across the WHOLE
     card, not just within its own section."""
     widths = [len(l) for b in blocks if b["type"] == "fields" for l, v in b["items"]]
+    widths += [len(b["label"]) for b in blocks if b["type"] == "loc"]
     return (max(widths) if widths else 0) + GAP_CHARS
 
 
@@ -157,6 +164,8 @@ def content_width_chars(blocks, label_col):
         elif b["type"] == "fields":
             for l, v in b["items"]:
                 chars = max(chars, label_col + len(v))
+        elif b["type"] == "loc":
+            chars = max(chars, label_col + len(loc_value_text(b)))
         elif b["type"] == "pairs":
             # Both columns render at equal width (see render_svg), so the
             # pair needs 2x whichever side (label+gap+value) is wider.
@@ -269,6 +278,28 @@ def render_svg(values, theme_name):
                     f'<tspan x="{right_edge}" text-anchor="end" fill="{colors["value"]}">{esc(v)}</tspan>'
                     f'</text>'
                 )
+
+        elif b["type"] == "loc":
+            y = next_y()
+            segments = [
+                (f"{b['total']} (", colors["value"]),
+                (f"{b['added']}++", colors["added"]),
+                (", ", colors["value"]),
+                (f"{b['deleted']}--", colors["deleted"]),
+                (")", colors["value"]),
+            ]
+            value_chars = sum(len(s) for s, _ in segments)
+            value_start_x = right_edge - value_chars * CHAR_W
+            tspans = "".join(
+                f'<tspan{f" x=\"{value_start_x}\"" if i == 0 else ""} fill="{color}">{esc(text)}</tspan>'
+                for i, (text, color) in enumerate(segments)
+            )
+            parts.append(
+                f'<text x="{stats_x}" y="{y}">'
+                f'<tspan fill="{colors["label"]}">{esc(b["label"])}</tspan>'
+                f'{tspans}'
+                f'</text>'
+            )
 
         elif b["type"] == "pairs":
             mid_edge = stats_x + (content_chars / 2) * CHAR_W

@@ -249,7 +249,7 @@ def build_blocks(values):
             ("Frontend languages:", "HTML, CSS, JavaScript"),
             ("Databases:", "SQL, SQLite, MS SQL Server, Firebase"),
             ("Data Analytics:", "R, Excel"),
-            ("Porject Management Tools:", "JIRA, Gitlab"),
+            ("Project Management Tools:", "JIRA, Gitlab"),
             ("Cloud Platforms:", "AWS"),
         ]},
         {"type": "section", "label": "Interests"},
