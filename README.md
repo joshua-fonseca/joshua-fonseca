@@ -35,7 +35,10 @@
 <br/>
 
 <p align="center">
-  <img src="https://profile-views.joshuacfonseca.workers.dev/" alt="Visitors"/>
+  <img
+    src="https://komarev.com/ghpvc/?username=joshua-Fonseca&style=flat&color=eb6f92&label=Profile+Views"
+    alt="Profile views"
+  />
 </p>
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
