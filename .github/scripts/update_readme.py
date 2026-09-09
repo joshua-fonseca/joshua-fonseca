@@ -40,6 +40,8 @@ BIRTH_DATE = date(2003, 3, 5)  # for the "Uptime" field
 
 AUTHOR_EMAILS = {
     "jfonse01@uoguelph.ca",
+    "joshuacfonseca@gmail.com",
+    "96248012+joshua-fonseca@users.noreply.github.com",
     # "your-username@users.noreply.github.com",
 }
 
