@@ -35,7 +35,7 @@
 <br/>
 
 <p align="center">
-  <img src="https://profile-views.joshuacfonseca.workers.dev/" alt="Visitors"/>
+  <img src="https://profile-views.joshuacfonseca.workers.dev/?test=1" alt="Visitors"/>
 </p>
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
