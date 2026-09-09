@@ -11,7 +11,9 @@
 <!-- 3. Everything else you add later goes below this line -->
 
 # 💫 About Me:
-I’m currently working on improving my programming skills through personal projects<br>I’m currently learning more about software engineering, databases, and full-stack development<br>Ask me about the projects I’m working on<br>Fun fact: I enjoy rhythm games and making music (DAW: FL Studio 25)<br>
+- I’m currently working on improving my programming skills through personal projects.
+- I’m currently learning more about software engineering, databases, and full-stack development.
+- Ask me about the projects I’m working on!
 
 ## 🌐 Socials:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/cqrd) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/joshuacfonseca) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jfonse01@uoguelph.ca) 
