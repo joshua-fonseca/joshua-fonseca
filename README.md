@@ -26,9 +26,9 @@
 
 ### stats:
 
-<img align="left" src="https://github-readme-stats.shion.dev/api?username=joshua-fonseca&theme=rose_pine&hide_border=true&include_all_commits=false&count_private=false&hide_rank=true" height="200"/>
-<img align="left" src="https://streak-stats.demolab.com/?user=joshua-fonseca&theme=rose_pine&hide_border=true&card_height=200" height="200"/>
-<img align="left" src="https://github-readme-stats.shion.dev/api/top-langs/?username=joshua-fonseca&theme=rose_pine&hide_border=true&include_all_commits=false&count_private=false&layout=compact" height="200"/>
+<img align="left" src="https://github-readme-stats.shion.dev/api?username=joshua-fonseca&theme=rose_pine&hide_border=true&include_all_commits=false&count_private=false&hide_rank=true" height="120"/>
+<img align="left" src="https://streak-stats.demolab.com/?user=joshua-fonseca&theme=rose_pine&hide_border=true&card_height=170" height="120"/>
+<img align="left" src="https://github-readme-stats.shion.dev/api/top-langs/?username=joshua-fonseca&theme=rose_pine&hide_border=true&include_all_commits=false&count_private=false&layout=compact" height="120"/>
 <br clear="left"/>
 <br/>
 
