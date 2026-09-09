@@ -39,7 +39,7 @@
 <text x="358.0" y="198"><tspan fill="#eb6f92">Frontend languages:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">HTML, CSS, JavaScript</tspan></text>
 <text x="358.0" y="218"><tspan fill="#eb6f92">Databases:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">SQL, SQLite, MS SQL Server, Firebase</tspan></text>
 <text x="358.0" y="238"><tspan fill="#eb6f92">Data Analytics:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">R, Excel</tspan></text>
-<text x="358.0" y="258"><tspan fill="#eb6f92">Porject Management Tools:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">JIRA, Gitlab</tspan></text>
+<text x="358.0" y="258"><tspan fill="#eb6f92">Project Management Tools:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">JIRA, Gitlab</tspan></text>
 <text x="358.0" y="278"><tspan fill="#eb6f92">Cloud Platforms:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">AWS</tspan></text>
 <text x="358.0" y="298" fill="#ffffff">- Interests </text>
 <line x1="458.8" y1="293.52" x2="887.2" y2="293.52" stroke="#8b949e" stroke-width="1.2"/>
@@ -54,6 +54,6 @@
 <text x="358.0" y="458" fill="#ffffff">- GitHub Contributions </text>
 <line x1="551.2" y1="453.52" x2="887.2" y2="453.52" stroke="#8b949e" stroke-width="1.2"/>
 <text x="358.0" y="478"><tspan fill="#eb6f92">Personal Repos:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#c9d1d9">9</tspan><tspan x="622.6" fill="#eb6f92">Other Repos:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">2</tspan></text>
-<text x="358.0" y="498"><tspan fill="#eb6f92">Personal Commits:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#c9d1d9">173</tspan><tspan x="622.6" fill="#eb6f92">Other Commits:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">73</tspan></text>
-<text x="358.0" y="518"><tspan fill="#eb6f92">Lines of Code:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">35,882 (46,019++, 10,137--)</tspan></text>
+<text x="358.0" y="498"><tspan fill="#eb6f92">Personal Commits:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#c9d1d9">184</tspan><tspan x="622.6" fill="#eb6f92">Other Commits:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">73</tspan></text>
+<text x="358.0" y="518"><tspan fill="#eb6f92">Lines of Code:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">35,820 (46,100++, 10,280--)</tspan></text>
 </svg>
