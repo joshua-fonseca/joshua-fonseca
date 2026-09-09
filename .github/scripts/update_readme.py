@@ -206,110 +206,129 @@ def loc_for_repo(path, branch, cache, name_with_owner):
     return added, deleted
 
 
-def build_stat_lines(values):
-    """Returns the right-hand column as plain text lines (SVG coloring is
-    applied separately in render_svg)."""
-    return [
-        "kkura@git",
-        "----------",
-        f"OS:      Windows 11, iOS, Ubuntu",
-        f"Uptime:  {values['UPTIME']}",
-        f"Kernel:  Data Quality / IT Support",
-        f"IDE:     VSCode",
-        "",
-        "- Tech stack ------------------------------------------",
-        "Programming:        Python, C",
-        "Web:                HTML, CSS, JavaScript",
-        "Data:                SQL, SQLite, MS SQL Server, Firebase",
-        "Analytics:          R, Excel",
-        "Tools:              JIRA",
-        "Cloud:              AWS",
-        "Human:              English, Tagalog",
-        "",
-        "- Interests -------------------------------------------",
-        "Software:           Adobe Photoshop, FL Studio",
-        "Interactive Media:  Minecraft, Rhythm Games",
-        "Creative:           Music Production, Drumming",
-        "",
-        "- Contact ---------------------------------------------",
-        "Email:              jfonse01@uoguelph.ca",
-        "LinkedIn:           joshuacfonseca",
-        "Discord:            cqrd",
-        "",
-        "- GitHub Stats ------------------------------------------",
-        f"Personal Repos: {values['PERSONAL_REPOS']} | Other Repos: {values['OTHER_REPOS']}",
-        f"Personal Commits: {values['PERSONAL_COMMITS']} | Other Commits: {values['OTHER_COMMITS']}",
-        f"Lines of Code: {values['TOTAL_LOC']} ({values['LOC_ADDED']}++, {values['LOC_DELETED']}--)",
-    ]
-
-
-# ---- SVG rendering ----------------------------------------------------------
-THEMES = {
-    "dark": {
-        "bg": "#0d1117",
-        "border": "#30363d",
-        "header": "#79c0ff",
-        "dash": "#8b949e",
-        "section": "#d2a8ff",
-        "label": "#ff7b72",
-        "value": "#c9d1d9",
-        "art": "#58a6ff",
-    },
-    "light": {
-        "bg": "#ffffff",
-        "border": "#d0d7de",
-        "header": "#0969da",
-        "dash": "#57606a",
-        "section": "#8250df",
-        "label": "#cf222e",
-        "value": "#24292f",
-        "art": "#0969da",
-    },
-}
-
 FONT_SIZE = 14
 LINE_HEIGHT = 20
 CHAR_W = 8.4
 PAD = 24
-ART_X = PAD
-STATS_X = PAD + max(len(l) for l in ASCII_ART) * CHAR_W + 40
+GAP_CHARS = 2         # min gap (in chars) between the longest label and its value
+SECTION_DASH_MIN = 4  # shortest a section-header dash run is allowed to shrink to
 
 
-def classify_line(text, colors):
-    """Returns a list of (substring, color) tspans for one stats line."""
-    if text == "kkura@git":
-        return [(text, colors["header"])]
-    if text and set(text) <= {"-"}:
-        return [(text, colors["dash"])]
-    if text.startswith("- "):
-        return [(text, colors["section"])]
-    if text == "":
-        return [("", colors["value"])]
-    if " | " in text:
-        segs = []
-        parts = text.split(" | ")
-        for i, part in enumerate(parts):
-            if ":" in part:
-                lbl, val = part.split(":", 1)
-                segs.append((lbl + ":", colors["label"]))
-                segs.append((val, colors["value"]))
-            else:
-                segs.append((part, colors["value"]))
-            if i < len(parts) - 1:
-                segs.append((" | ", colors["dash"]))
-        return segs
-    if ":" in text:
-        lbl, val = text.split(":", 1)
-        return [(lbl + ":", colors["label"]), (val, colors["value"])]
-    return [(text, colors["value"])]
+def esc(s):
+    return escape(str(s))
 
 
-def render_svg(values, theme_name):
-    colors = THEMES[theme_name]
-    stat_lines = build_stat_lines(values)
-    n_lines = max(len(ASCII_ART), len(stat_lines))
-    width = int(STATS_X + max(len(l) for l in stat_lines) * CHAR_W + PAD)
+def build_blocks(values):
+    """The whole card, described as a sequence of typed blocks.
+    'fields' blocks get their value column aligned to the longest label
+    in that block. 'pairs' blocks align into four columns."""
+    return [
+        {"type": "header", "text": "kkura@git"},
+        {"type": "dash", "text": "----------"},
+        {"type": "fields", "items": [
+            ("OS:", "Windows 11, iOS, Ubuntu"),
+            ("Uptime:", values["UPTIME"]),
+            ("Kernel:", "Data Quality / IT Support"),
+            ("IDE:", "VSCode"),
+        ]},
+        {"type": "section", "label": "Tech stack"},
+        {"type": "fields", "items": [
+            ("Core languages", "Python, C"),
+            ("Frontend languages:", "HTML, CSS, JavaScript"),
+            ("Databases:", "SQL, SQLite, MS SQL Server, Firebase"),
+            ("Data Analytics:", "R, Excel"),
+            ("Porject Management Tools:", "JIRA, Gitlab"),
+            ("Cloud Platforms:", "AWS"),
+        ]},
+        {"type": "section", "label": "Interests"},
+        {"type": "fields", "items": [
+            ("Software:", "Adobe Photoshop, FL Studio"),
+            ("Interactive Media:", "Minecraft, Rhythm Games"),
+            ("Creative:", "Music Production, Drumming"),
+        ]},
+        {"type": "section", "label": "Contact Info"},
+        {"type": "fields", "items": [
+            ("Email:", "jfonse01@uoguelph.ca"),
+            ("LinkedIn:", "joshuacfonseca"),
+            ("Discord:", "cqrd"),
+        ]},
+        {"type": "section", "label": "GitHub Contributions"},
+        {"type": "pairs", "rows": [
+            [("Personal Repos:", str(values["PERSONAL_REPOS"])), ("Other Repos:", str(values["OTHER_REPOS"]))],
+            [("Personal Commits:", values["PERSONAL_COMMITS"]), ("Other Commits:", values["OTHER_COMMITS"])],
+        ]},
+        {"type": "fields", "items": [
+            ("Lines of Code:", f"{values['TOTAL_LOC']} ({values['LOC_ADDED']}++, {values['LOC_DELETED']}--)"),
+        ]},
+    ]
+
+
+def label_column_width(blocks):
+    """Global label-column width (in chars), shared by every 'fields' block so
+    every label/value pair lines up at the same x position across the WHOLE
+    card, not just within its own section."""
+    widths = [len(l) for b in blocks if b["type"] == "fields" for l, v in b["items"]]
+    return (max(widths) if widths else 0) + GAP_CHARS
+
+
+def content_width_chars(blocks, label_col):
+    """How wide (in chars) the stats column's content is, overall. Section
+    header dash-runs are stretched or shrunk to reach exactly this width, so
+    every kind of row - fields, pairs, and section dividers - lines up on the
+    same right edge, the way Andrew6rant's card does."""
+    chars = 0
+    for b in blocks:
+        if b["type"] in ("header", "dash"):
+            chars = max(chars, len(b["text"]))
+        elif b["type"] == "fields":
+            for l, v in b["items"]:
+                chars = max(chars, label_col + len(v))
+        elif b["type"] == "pairs":
+            # Both columns render at equal width (see render_svg), so the
+            # pair needs 2x whichever side (label+gap+value) is wider.
+            col1_chars = max(len(r[0][0]) for r in b["rows"]) + GAP_CHARS + max(len(r[0][1]) for r in b["rows"])
+            col2_chars = max(len(r[1][0]) for r in b["rows"]) + GAP_CHARS + max(len(r[1][1]) for r in b["rows"])
+            chars = max(chars, 2 * max(col1_chars, col2_chars))
+    # make sure a long section label still fits with at least the minimum dashes
+    for b in blocks:
+        if b["type"] == "section":
+            chars = max(chars, len(f"- {b['label']} ") + SECTION_DASH_MIN)
+    return chars
+
+
+def measure_width(blocks, ascii_art, stats_x_start, content_chars):
+    """Compute total SVG width from the widest rendered row."""
+    art_chars = max(len(l) for l in ascii_art)
+    return max(
+        stats_x_start + int(content_chars * CHAR_W),
+        PAD + int(art_chars * CHAR_W),
+    ) + PAD
+
+
+def count_lines(blocks, ascii_art):
+    n = 0
+    for b in blocks:
+        if b["type"] == "fields":
+            n += len(b["items"])
+        elif b["type"] == "pairs":
+            n += len(b["rows"])
+        else:
+            n += 1
+    return max(n, len(ascii_art))
+
+
+def render_svg(values, theme_name, themes, ascii_art):
+    colors = themes[theme_name]
+    art_x = PAD
+    stats_x = PAD + max(len(l) for l in ascii_art) * CHAR_W + 40
+
+    blocks = build_blocks(values)
+    label_col = label_column_width(blocks)
+    content_chars = content_width_chars(blocks, label_col)
+    width = measure_width(blocks, ascii_art, stats_x, content_chars)
+    n_lines = count_lines(blocks, ascii_art)
     height = int(n_lines * LINE_HEIGHT + PAD * 2)
+    right_edge = stats_x + content_chars * CHAR_W
 
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
@@ -321,27 +340,98 @@ def render_svg(values, theme_name):
 
     # ASCII art column
     art_y = PAD + FONT_SIZE
-    parts.append(f'<text x="{ART_X}" y="{art_y}" fill="{colors["art"]}" xml:space="preserve">')
-    for i, line in enumerate(ASCII_ART):
+    parts.append(f'<text x="{art_x}" y="{art_y}" fill="{colors["art"]}" xml:space="preserve">')
+    for i, line in enumerate(ascii_art):
         dy = 0 if i == 0 else LINE_HEIGHT
-        parts.append(f'<tspan x="{ART_X}" dy="{dy}">{escape(line)}</tspan>')
+        parts.append(f'<tspan x="{art_x}" dy="{dy}">{esc(line)}</tspan>')
     parts.append("</text>")
 
-    # Stats column
+    # Stats column: every row gets its own absolute y (rather than chained
+    # relative dy). This lets section dividers be drawn as real <line>
+    # elements - pixel-exact against the value column's right_edge, instead
+    # of a run of "-" characters whose total width depends on the renderer's
+    # font metrics actually matching CHAR_W.
     stats_y = PAD + FONT_SIZE
-    parts.append(f'<text x="{STATS_X}" y="{stats_y}" xml:space="preserve">')
-    for i, line in enumerate(stat_lines):
-        dy = 0 if i == 0 else LINE_HEIGHT
-        segs = classify_line(line, colors)
-        tspan_open = f'<tspan x="{STATS_X}" dy="{dy}">' if i > 0 else f'<tspan x="{STATS_X}">'
-        parts.append(tspan_open)
-        for text, color in segs:
-            parts.append(f'<tspan fill="{color}">{escape(text)}</tspan>')
-        parts.append("</tspan>")
-    parts.append("</text>")
+    line_i = 0
+
+    def next_y():
+        nonlocal line_i
+        y = stats_y + line_i * LINE_HEIGHT
+        line_i += 1
+        return y
+
+    for b in blocks:
+        if b["type"] == "header":
+            y = next_y()
+            name, at, rest = b["text"].partition("@")
+            parts.append(
+                f'<text x="{stats_x}" y="{y}">'
+                f'<tspan fill="{colors["header"]}">{esc(name)}</tspan>'
+                f'<tspan fill="{colors["header_at"]}">{esc(at)}</tspan>'
+                f'<tspan fill="{colors["header"]}">{esc(rest)}</tspan>'
+                f'</text>'
+            )
+
+        elif b["type"] == "dash":
+            y = next_y()
+            parts.append(f'<text x="{stats_x}" y="{y}" fill="{colors["dash"]}">{esc(b["text"])}</text>')
+
+        elif b["type"] == "section":
+            y = next_y()
+            prefix = f"- {b['label']} "
+            prefix_end_x = stats_x + len(prefix) * CHAR_W
+            parts.append(f'<text x="{stats_x}" y="{y}" fill="{colors["section"]}">{esc(prefix)}</text>')
+            if prefix_end_x < right_edge:
+                line_y = y - FONT_SIZE * 0.32
+                parts.append(
+                    f'<line x1="{prefix_end_x}" y1="{line_y}" x2="{right_edge}" y2="{line_y}" '
+                    f'stroke="{colors["dash"]}" stroke-width="1.2"/>'
+                )
+
+        elif b["type"] == "fields":
+            for l, v in b["items"]:
+                y = next_y()
+                parts.append(
+                    f'<text x="{stats_x}" y="{y}">'
+                    f'<tspan fill="{colors["label"]}">{esc(l)}</tspan>'
+                    f'<tspan x="{right_edge}" text-anchor="end" fill="{colors["value"]}">{esc(v)}</tspan>'
+                    f'</text>'
+                )
+
+        elif b["type"] == "pairs":
+            mid_edge = stats_x + (content_chars / 2) * CHAR_W
+            x_v1_right = mid_edge - GAP_CHARS * CHAR_W
+            x_l2 = mid_edge
+            for row in b["rows"]:
+                y = next_y()
+                (l1, v1), (l2, v2) = row
+                parts.append(
+                    f'<text x="{stats_x}" y="{y}">'
+                    f'<tspan fill="{colors["label"]}">{esc(l1)}</tspan>'
+                    f'<tspan x="{x_v1_right}" text-anchor="end" fill="{colors["value"]}">{esc(v1)}</tspan>'
+                    f'<tspan x="{x_l2}" fill="{colors["label"]}">{esc(l2)}</tspan>'
+                    f'<tspan x="{right_edge}" text-anchor="end" fill="{colors["value"]}">{esc(v2)}</tspan>'
+                    f'</text>'
+                )
 
     parts.append("</svg>")
     return "\n".join(parts)
+
+
+ASCII_ART_COLOR_KEY = "art"
+
+THEMES = {
+    "dark": {
+        "bg": "#0d1117", "border": "#30363d", "header": "#eb6f92",
+        "header_at": "#ffffff", "dash": "#8b949e", "section": "#ffffff",
+        "label": "#eb6f92", "value": "#c9d1d9", "art": "#eb6f92",
+    },
+    "light": {
+        "bg": "#ffffff", "border": "#d0d7de", "header": "#eb6f92",
+        "header_at": "#24292f", "dash": "#57606a", "section": "#24292f",
+        "label": "#eb6f92", "value": "#24292f", "art": "#eb6f92",
+    },
+}
 
 
 def main():
@@ -394,9 +484,9 @@ def main():
     }
 
     with open("dark_mode.svg", "w") as f:
-        f.write(render_svg(values, "dark"))
+        f.write(render_svg(values, "dark", THEMES, ASCII_ART))
     with open("light_mode.svg", "w") as f:
-        f.write(render_svg(values, "light"))
+        f.write(render_svg(values, "light", THEMES, ASCII_ART))
 
 
 if __name__ == "__main__":

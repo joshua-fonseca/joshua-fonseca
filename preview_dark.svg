@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="869" height="648" viewBox="0 0 869 648" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="14">
-<rect x="0" y="0" width="869" height="648" rx="8" fill="#0d1117" stroke="#30363d"/>
-<text x="24" y="38" fill="#58a6ff" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" width="919.4000000000001" height="548" viewBox="0 0 919.4000000000001 548" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="14">
+<rect x="0" y="0" width="919.4000000000001" height="548" rx="8" fill="#0d1117" stroke="#30363d"/>
+<text x="24" y="38" fill="#eb6f92" xml:space="preserve">
 <tspan x="24" dy="0">                .:^^^^:.</tspan>
 <tspan x="24" dy="20">             .:^        ^:.</tspan>
 <tspan x="24" dy="20">           .:^            ^:.</tspan>
@@ -15,122 +15,33 @@
 <tspan x="24" dy="20">             ':^^,,,,,,^^:'</tspan>
 <tspan x="24" dy="20">                '':::::''</tspan>
 </text>
-<text x="366.40000000000003" y="38" xml:space="preserve">
-<tspan x="366.40000000000003">
-<tspan fill="#79c0ff">kkura@git</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#8b949e">----------</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">OS:</tspan>
-<tspan fill="#c9d1d9">      Windows 11, iOS, Ubuntu</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Uptime:</tspan>
-<tspan fill="#c9d1d9">  23 years, 6 months, 3 days</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Kernel:</tspan>
-<tspan fill="#c9d1d9">  Data Quality / IT Support</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">IDE:</tspan>
-<tspan fill="#c9d1d9">     VSCode</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#c9d1d9"></tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#d2a8ff">- Tech stack ------------------------------------------</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Programming:</tspan>
-<tspan fill="#c9d1d9">        Python, C</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Web:</tspan>
-<tspan fill="#c9d1d9">                HTML, CSS, JavaScript</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Data:</tspan>
-<tspan fill="#c9d1d9">                SQL, SQLite, MS SQL Server, Firebase</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Analytics:</tspan>
-<tspan fill="#c9d1d9">          R, Excel</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Tools:</tspan>
-<tspan fill="#c9d1d9">              JIRA</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Cloud:</tspan>
-<tspan fill="#c9d1d9">              AWS</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Human:</tspan>
-<tspan fill="#c9d1d9">              English, Tagalog</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#c9d1d9"></tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#d2a8ff">- Interests -------------------------------------------</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Software:</tspan>
-<tspan fill="#c9d1d9">           Adobe Photoshop, FL Studio</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Interactive Media:</tspan>
-<tspan fill="#c9d1d9">  Minecraft, Rhythm Games</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Creative:</tspan>
-<tspan fill="#c9d1d9">           Music Production, Drumming</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#c9d1d9"></tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#d2a8ff">- Contact ---------------------------------------------</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Email:</tspan>
-<tspan fill="#c9d1d9">              jfonse01@uoguelph.ca</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">LinkedIn:</tspan>
-<tspan fill="#c9d1d9">           joshuacfonseca</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Discord:</tspan>
-<tspan fill="#c9d1d9">            cqrd</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#c9d1d9"></tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#d2a8ff">- GitHub Stats ------------------------------------------</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Personal Repos:</tspan>
-<tspan fill="#c9d1d9"> 12</tspan>
-<tspan fill="#8b949e"> | </tspan>
-<tspan fill="#ff7b72">Other Repos:</tspan>
-<tspan fill="#c9d1d9"> 4</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Personal Commits:</tspan>
-<tspan fill="#c9d1d9"> 1,234</tspan>
-<tspan fill="#8b949e"> | </tspan>
-<tspan fill="#ff7b72">Other Commits:</tspan>
-<tspan fill="#c9d1d9"> 56</tspan>
-</tspan>
-<tspan x="366.40000000000003" dy="20">
-<tspan fill="#ff7b72">Lines of Code:</tspan>
-<tspan fill="#c9d1d9"> 45,678 (50,000++, 4,322--)</tspan>
-</tspan>
-</text>
+<text x="366.40000000000003" y="38"><tspan fill="#eb6f92">kkura</tspan><tspan fill="#ffffff">@</tspan><tspan fill="#eb6f92">git</tspan></text>
+<text x="366.40000000000003" y="58" fill="#8b949e">----------</text>
+<text x="366.40000000000003" y="78"><tspan fill="#eb6f92">OS:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">Windows 11, iOS, Ubuntu</tspan></text>
+<text x="366.40000000000003" y="98"><tspan fill="#eb6f92">Uptime:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">23 years, 6 months, 3 days</tspan></text>
+<text x="366.40000000000003" y="118"><tspan fill="#eb6f92">Kernel:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">Data Quality / IT Support</tspan></text>
+<text x="366.40000000000003" y="138"><tspan fill="#eb6f92">IDE:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">VSCode</tspan></text>
+<text x="366.40000000000003" y="158" fill="#ffffff">- Tech stack </text>
+<line x1="475.6" y1="153.52" x2="895.6000000000001" y2="153.52" stroke="#8b949e" stroke-width="1.2"/>
+<text x="366.40000000000003" y="178"><tspan fill="#eb6f92">Core languages:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">Python, C</tspan></text>
+<text x="366.40000000000003" y="198"><tspan fill="#eb6f92">Frontend languages:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">HTML, CSS, JavaScript</tspan></text>
+<text x="366.40000000000003" y="218"><tspan fill="#eb6f92">Databases:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">SQL, SQLite, MS SQL Server, Firebase</tspan></text>
+<text x="366.40000000000003" y="238"><tspan fill="#eb6f92">Data Analytics:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">R, Excel</tspan></text>
+<text x="366.40000000000003" y="258"><tspan fill="#eb6f92">Project Management Tools:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">JIRA, GitLab</tspan></text>
+<text x="366.40000000000003" y="278"><tspan fill="#eb6f92">Cloud Platforms:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">AWS</tspan></text>
+<text x="366.40000000000003" y="298" fill="#ffffff">- Interests </text>
+<line x1="467.20000000000005" y1="293.52" x2="895.6000000000001" y2="293.52" stroke="#8b949e" stroke-width="1.2"/>
+<text x="366.40000000000003" y="318"><tspan fill="#eb6f92">Software:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">Adobe Photoshop, FL Studio</tspan></text>
+<text x="366.40000000000003" y="338"><tspan fill="#eb6f92">Interactive Media:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">Minecraft, Rhythm Games</tspan></text>
+<text x="366.40000000000003" y="358"><tspan fill="#eb6f92">Creative:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">Music Production, Drumming</tspan></text>
+<text x="366.40000000000003" y="378" fill="#ffffff">- Contact Info </text>
+<line x1="492.40000000000003" y1="373.52" x2="895.6000000000001" y2="373.52" stroke="#8b949e" stroke-width="1.2"/>
+<text x="366.40000000000003" y="398"><tspan fill="#eb6f92">Email:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">jfonse01@uoguelph.ca</tspan></text>
+<text x="366.40000000000003" y="418"><tspan fill="#eb6f92">LinkedIn:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">joshuacfonseca</tspan></text>
+<text x="366.40000000000003" y="438"><tspan fill="#eb6f92">Discord:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">cqrd</tspan></text>
+<text x="366.40000000000003" y="458" fill="#ffffff">- GitHub Contributions </text>
+<line x1="559.6" y1="453.52" x2="895.6000000000001" y2="453.52" stroke="#8b949e" stroke-width="1.2"/>
+<text x="366.40000000000003" y="478"><tspan fill="#eb6f92">Personal Repos:</tspan><tspan x="614.2" text-anchor="end" fill="#c9d1d9">12</tspan><tspan x="631.0" fill="#eb6f92">Other Repos:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">4</tspan></text>
+<text x="366.40000000000003" y="498"><tspan fill="#eb6f92">Personal Commits:</tspan><tspan x="614.2" text-anchor="end" fill="#c9d1d9">1,234</tspan><tspan x="631.0" fill="#eb6f92">Other Commits:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">56</tspan></text>
+<text x="366.40000000000003" y="518"><tspan fill="#eb6f92">Lines of Code:</tspan><tspan x="895.6000000000001" text-anchor="end" fill="#c9d1d9">45,678 (50,000++, 4,322--)</tspan></text>
 </svg>
