@@ -26,14 +26,11 @@
 
 ### stats:
 
-
-<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
-  <tr style="border: none;">
-    <td style="border: none;"><img src="https://github-readme-stats.shion.dev/api?username=joshua-fonseca&theme=rose_pine&hide_border=false&include_all_commits=false&count_private=false&hide_rank=true" height="200"/></td>
-    <td style="border: none;"><img src="https://streak-stats.demolab.com/?user=joshua-fonseca&theme=rose_pine&hide_border=false&card_height=200" height="200"/></td>
-    <td style="border: none;"><img src="https://github-readme-stats.shion.dev/api/top-langs/?username=joshua-fonseca&theme=rose_pine&hide_border=false&include_all_commits=false&count_private=false&layout=compact" height="200"/></td>
-  </tr>
-</table>
+<img align="left" src="https://github-readme-stats.shion.dev/api?username=joshua-fonseca&theme=rose_pine&hide_border=true&include_all_commits=false&count_private=false&hide_rank=true" height="200"/>
+<img align="left" src="https://streak-stats.demolab.com/?user=joshua-fonseca&theme=rose_pine&hide_border=true&card_height=200" height="200"/>
+<img align="left" src="https://github-readme-stats.shion.dev/api/top-langs/?username=joshua-fonseca&theme=rose_pine&hide_border=true&include_all_commits=false&count_private=false&layout=compact" height="200"/>
+<br clear="left"/>
+<br/>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=joshua-fonseca&color=eb6f92&style=flat" alt="Visitors"/>
