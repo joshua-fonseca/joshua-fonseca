@@ -30,7 +30,7 @@
 <text x="358.0" y="38"><tspan fill="#eb6f92">kkura</tspan><tspan fill="#24292f">@</tspan><tspan fill="#eb6f92">git</tspan></text>
 <text x="358.0" y="58" fill="#57606a">----------</text>
 <text x="358.0" y="78"><tspan fill="#eb6f92">OS:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">Windows 11, iOS, Ubuntu</tspan></text>
-<text x="358.0" y="98"><tspan fill="#eb6f92">Uptime:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">23 years, 6 months, 5 days</tspan></text>
+<text x="358.0" y="98"><tspan fill="#eb6f92">Uptime:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">23 years, 6 months, 6 days</tspan></text>
 <text x="358.0" y="118"><tspan fill="#eb6f92">Kernel:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">Data Quality / IT Support</tspan></text>
 <text x="358.0" y="138"><tspan fill="#eb6f92">IDE:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">VSCode</tspan></text>
 <text x="358.0" y="158" fill="#24292f">- Tech stack </text>
@@ -54,6 +54,6 @@
 <text x="358.0" y="458" fill="#24292f">- GitHub Contributions </text>
 <line x1="551.2" y1="453.52" x2="887.2" y2="453.52" stroke="#57606a" stroke-width="1.2"/>
 <text x="358.0" y="478"><tspan fill="#eb6f92">Personal Repos:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#24292f">10</tspan><tspan x="622.6" fill="#eb6f92">Other Repos:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">2</tspan></text>
-<text x="358.0" y="498"><tspan fill="#eb6f92">Personal Commits:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#24292f">184</tspan><tspan x="622.6" fill="#eb6f92">Other Commits:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">73</tspan></text>
-<text x="358.0" y="518"><tspan fill="#eb6f92">Lines of Code:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">35,820 (46,100++, 10,280--)</tspan></text>
+<text x="358.0" y="498"><tspan fill="#eb6f92">Personal Commits:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#24292f">193</tspan><tspan x="622.6" fill="#eb6f92">Other Commits:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">73</tspan></text>
+<text x="358.0" y="518"><tspan fill="#eb6f92">Lines of Code:</tspan><tspan x="887.2" text-anchor="end" fill="#24292f">-41,480 (46,655++, 88,135--)</tspan></text>
 </svg>
