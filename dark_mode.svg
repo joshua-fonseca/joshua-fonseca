@@ -30,7 +30,7 @@
 <text x="358.0" y="38"><tspan fill="#eb6f92">kkura</tspan><tspan fill="#ffffff">@</tspan><tspan fill="#eb6f92">git</tspan></text>
 <text x="358.0" y="58" fill="#8b949e">----------</text>
 <text x="358.0" y="78"><tspan fill="#eb6f92">OS:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">Windows 11, iOS, Ubuntu</tspan></text>
-<text x="358.0" y="98"><tspan fill="#eb6f92">Uptime:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">23 years, 6 months, 4 days</tspan></text>
+<text x="358.0" y="98"><tspan fill="#eb6f92">Uptime:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">23 years, 6 months, 7 days</tspan></text>
 <text x="358.0" y="118"><tspan fill="#eb6f92">Kernel:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">Data Quality / IT Support</tspan></text>
 <text x="358.0" y="138"><tspan fill="#eb6f92">IDE:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">VSCode</tspan></text>
 <text x="358.0" y="158" fill="#ffffff">- Tech stack </text>
@@ -39,7 +39,7 @@
 <text x="358.0" y="198"><tspan fill="#eb6f92">Frontend languages:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">HTML, CSS, JavaScript</tspan></text>
 <text x="358.0" y="218"><tspan fill="#eb6f92">Databases:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">SQL, SQLite, MS SQL Server, Firebase</tspan></text>
 <text x="358.0" y="238"><tspan fill="#eb6f92">Data Analytics:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">R, Excel</tspan></text>
-<text x="358.0" y="258"><tspan fill="#eb6f92">Porject Management Tools:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">JIRA, Gitlab</tspan></text>
+<text x="358.0" y="258"><tspan fill="#eb6f92">Project Management Tools:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">JIRA, Gitlab</tspan></text>
 <text x="358.0" y="278"><tspan fill="#eb6f92">Cloud Platforms:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">AWS</tspan></text>
 <text x="358.0" y="298" fill="#ffffff">- Interests </text>
 <line x1="458.8" y1="293.52" x2="887.2" y2="293.52" stroke="#8b949e" stroke-width="1.2"/>
@@ -53,7 +53,7 @@
 <text x="358.0" y="438"><tspan fill="#eb6f92">Discord:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">cqrd</tspan></text>
 <text x="358.0" y="458" fill="#ffffff">- GitHub Contributions </text>
 <line x1="551.2" y1="453.52" x2="887.2" y2="453.52" stroke="#8b949e" stroke-width="1.2"/>
-<text x="358.0" y="478"><tspan fill="#eb6f92">Personal Repos:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#c9d1d9">9</tspan><tspan x="622.6" fill="#eb6f92">Other Repos:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">2</tspan></text>
-<text x="358.0" y="498"><tspan fill="#eb6f92">Personal Commits:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#c9d1d9">173</tspan><tspan x="622.6" fill="#eb6f92">Other Commits:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">73</tspan></text>
-<text x="358.0" y="518"><tspan fill="#eb6f92">Lines of Code:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">35,882 (46,019++, 10,137--)</tspan></text>
+<text x="358.0" y="478"><tspan fill="#eb6f92">Personal Repos:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#c9d1d9">10</tspan><tspan x="622.6" fill="#eb6f92">Other Repos:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">2</tspan></text>
+<text x="358.0" y="498"><tspan fill="#eb6f92">Personal Commits:</tspan><tspan x="605.8000000000001" text-anchor="end" fill="#c9d1d9">196</tspan><tspan x="622.6" fill="#eb6f92">Other Commits:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">73</tspan></text>
+<text x="358.0" y="518"><tspan fill="#eb6f92">Lines of Code:</tspan><tspan x="887.2" text-anchor="end" fill="#c9d1d9">-41,480 (46,658++, 88,138--)</tspan></text>
 </svg>
