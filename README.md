@@ -15,8 +15,9 @@
 ---
 
 ### about me:
-- I’m currently working on improving my programming skills through personal projects.
-- I’m currently learning more about software engineering, databases, and full-stack development.
+- I’m currently improving my programming skills through personal projects.
+- I’m learning more about software engineering and full-stack development; things school refused to reinforce.
+- I enjoy exploring data, spotting anomalies, and figuring out why things don’t look right.
 - Ask me about the projects I’m working on!
 
 ### social links:
