@@ -16,7 +16,7 @@
 
 ### about me:
 - I’m currently improving my programming skills through personal projects.
-- I’m learning more about software engineering and full-stack development; things school refused to reinforce.
+- I’m learning more about working with AI and how it can fit into the software development process.
 - I enjoy exploring data, spotting anomalies, and figuring out why things don’t look right.
 - Ask me about the projects I’m working on!
 
